@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PoseActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <fragment
+        android:id="@+id/top_bar"
+        android:name="com.vyvyvi.yogabook.fragments.TopBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:elevation="10dp"
+        android:src="@drawable/pose_placeholder"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        android:clipToOutline="true"/>
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background_black"
+        android:hint="Enter Name"
+        android:padding="10dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etHindiName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background_black"
+        android:hint="Enter Hindi Name"
+        android:padding="10dp"
+        android:textSize="20dp" />
+    <EditText
+        android:inputType="text|textMultiLine"
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background_black"
+        android:hint="Enter Pose Description"
+        android:padding="10dp"
+        android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="40dp"
+                android:backgroundTint="@color/mint"
+                android:fontFamily="sans-serif-medium"
+                android:text="SAVE"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="40dp"
+                android:backgroundTint="@color/red"
+                android:fontFamily="sans-serif-medium"
+                android:text="DELETE"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

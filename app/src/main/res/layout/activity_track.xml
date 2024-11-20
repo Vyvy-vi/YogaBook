@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrackActivity">
+
+    <ImageView
+        android:id="@+id/cancelBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_cancel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click on the image to Start/Pause"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cancelBtn"/>
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/tooltip" />
+
+    <LinearLayout
+        android:id="@+id/name"
+        android:layout_below="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/hindiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36dp"
+            android:text="Asan"/>
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_help" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/englishName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:textSize="24dp"
+        android:text="Pose"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sessionItemBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>

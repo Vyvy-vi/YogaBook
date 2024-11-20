@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoutineActivity">
+
+    <fragment
+        android:id="@+id/top_bar"
+        android:name="com.vyvyvi.yogabook.fragments.TopBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="Let's start this amazing yoga session!"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="Tap to adjust duration of exercise. Long click to delete.\nClick on 'Plan Routine' or pencil icon button to add poses to your routine."
+        android:layout_marginBottom="12dp"
+        android:layout_marginHorizontal="10dp"/>
+
+        <ListView
+            android:id="@+id/sessionList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sessionList"
+            android:text="Add more poses to routine"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="30dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editRoutine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startSession"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_edit"
+        android:tooltipText="Edit your Yoga routine"
+        android:layout_marginHorizontal="20dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/startSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_play_arrow"
+        android:tooltipText="Start your yoga session!"
+        android:layout_margin="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/btn_cancel"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_cancel" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/btn_gallery"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="Fetch from Gallery" />
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/urlEt"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:hint="Enter Image URL"
+        android:padding="5dp"
+        android:background="@drawable/edittext_background_black"/>
+
+    <Button
+        android:id="@+id/btn_url"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="Download from URL" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_fetch"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="Fetch from URL" />
+
+</LinearLayout>
